@@ -29,6 +29,7 @@ if st.button('Predict'):
 
     # Make predictions using the loaded model
     predicted_class = trained_model.predict(input_features_array)
+    print(predicted_class)
 
     print(predicted_class[0])
 
