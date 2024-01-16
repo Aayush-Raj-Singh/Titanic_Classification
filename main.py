@@ -4,7 +4,7 @@ import pickle
 
 
 # Load the trained model
-with open('trained_model_lr.pkl', 'rb') as model_file:
+with open('trained_model.pkl', 'rb') as model_file:
     trained_model = pickle.load(model_file)
 
 st.title('Titanic Survival Prediction')
