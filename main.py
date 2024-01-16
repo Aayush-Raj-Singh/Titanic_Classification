@@ -2,13 +2,11 @@ import numpy as np
 import streamlit as st
 import pickle
 
-
 # Load the trained model
 with open('trained_model.pkl', 'rb') as model_file:
     trained_model = pickle.load(model_file)
 
 st.title('Titanic Survival Prediction')
-
 
 st.write("Note")
 st.write(f"Please give input based on the changes what we did in data")
@@ -29,11 +27,10 @@ if st.button('Predict'):
 
     # Make predictions using the loaded model
     predicted_class = trained_model.predict(input_features_array)
-    print(predicted_class)
-    print(predicted_class[0])
+    print(predicted_class[1])
 if predicted_class==0:
     print('person will die')
 else:
     print('The Person will Survive.')
 
-    st.write(f"Predicted class: {predicted_class[0]}")
+    st.write(f"Predicted class: {predicted_class[1]}")
